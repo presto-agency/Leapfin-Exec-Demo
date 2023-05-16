@@ -1,0 +1,847 @@
+// main project styles + custom normalize
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+html {
+  font-size: 100%;
+  // height: 100%;
+  -webkit-text-size-adjust: none;
+  -webkit-appearance: none;
+  max-height: 9001em;
+  line-height: 1.3; // Correct the line height in all browsers.
+  -webkit-text-size-adjust: 100%; // Prevent adjustments of font size after orientation changes in iOS.
+}
+
+body {
+  // min-height: 100%;
+  // height: 100%;
+  width: 100%;
+  min-width: 320px;
+  margin: 0; // Remove the margin in all browsers.
+  font-size: 14px;
+  font-family: "PoppinsRegular", sans-serif;
+  color: $white;
+  background: radial-gradient(145.34% 279.06% at 135.77% 22.47%, #63B866 2.53%, #2A326D 42.88%, #1B2345 90.1%), no-repeat;
+  /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+  ;
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  backface-visibility: hidden;
+  text-rendering: geometricPrecision;
+  // height: 100vh;
+  // width: 100vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+  font-family: 'PoppinsSemibold', sans-serif;
+  line-height: 1.688em;
+}
+
+h1,
+h2 {
+  font-size: 32px;
+  margin-bottom: 83px;
+
+  span {
+    color: $primary;
+  }
+}
+
+h2 {
+  margin-bottom: 40px;
+}
+
+h3 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+h4 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+h5 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+h6 {
+  font-size: 14px;
+  color: #A2CB94;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+hr {
+  box-sizing: content-box; // Add the correct box sizing in Firefox.
+  height: 0; // Add the correct box sizing in Firefox.
+  overflow: visible; // Show the overflow in Edge and IE.
+}
+
+pre {
+  font-family: monospace, monospace; // Correct the inheritance and scaling of font size in all browsers.
+  font-size: 1em; // Correct the odd `em` font sizing in all browsers.
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+  line-height: 1.6em;
+  margin: 0;
+  background-color: transparent; //Remove the gray background on active links in IE 10.
+
+  &:visited {
+    text-decoration: none;
+  }
+}
+
+abbr[title] {
+  border-bottom: none; // Remove the bottom border in Chrome 57-
+  text-decoration: underline; // Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+  text-decoration: underline dotted; // Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+}
+
+b,
+strong {
+  font-weight: bold; // Add the correct font weight in Chrome, Edge, and Safari.
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; // Correct the inheritance and scaling of font size in all browsers.
+  font-size: 1em; // Correct the odd `em` font sizing in all browsers; // Add the correct font size in all browsers.
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0; // Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img,
+picture,
+source {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  border-style: none; // Remove the border on images inside links in IE 10.
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; //  Change the font styles in all browsers.
+  font-size: 100%; //  Change the font styles in all browsers.
+  line-height: 1.15; //  Change the font styles in all browsers.
+  margin: 0; // Remove the margin in Firefox and Safari.
+}
+
+input {
+  line-height: 1em;
+}
+
+button,
+input {
+  overflow: visible; // Show the overflow in Edge.
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select {
+  text-transform: none; // Remove the inheritance of text transform in Edge, Firefox, and IE. Remove the inheritance of text transform in Firefox.
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+// Correct the inability to style clickable types in iOS and Safari.
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+}
+
+// Remove the inner border and padding in Firefox.
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+// Correct the padding in Firefox.
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box; // Correct the text wrapping in Edge and IE.
+  color: inherit; // Correct the color inheritance from `fieldset` elements in IE.
+  display: table; // Correct the text wrapping in Edge and IE.
+  max-width: 100%; // Correct the text wrapping in Edge and IE.
+  padding: 0; // Remove the padding so developers are not caught out when they zero out `fieldset` elements in all browsers.
+  white-space: normal; // Correct the text wrapping in Edge and IE.
+}
+
+progress {
+  vertical-align: baseline; // Add the correct vertical alignment in Chrome, Firefox, and Opera.
+}
+
+// Remove the default vertical scrollbar in IE 10+.
+textarea {
+  overflow: hidden;
+  resize: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+label {
+  cursor: pointer;
+}
+
+[type='checkbox'],
+[type='radio'] {
+  box-sizing: border-box; // Add the correct box sizing in IE 10.
+  padding: 0; // Remove the padding in IE 10.
+}
+
+// Correct the cursor style of increment and decrement buttons in Chrome.
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type='search'] {
+  -webkit-appearance: textfield; //  Correct the odd appearance in Chrome and Safari.
+  outline-offset: -2px; // Correct the outline style in Safari.
+}
+
+// Remove the inner padding in Chrome and Safari on macOS.
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; // Correct the inability to style clickable types in iOS and Safari.
+  font: inherit; // Change font properties to `inherit` in Safari.
+}
+
+details {
+  display: block; // Add the correct display in Edge, IE 10+, and Firefox.
+}
+
+summary {
+  display: list-item; // Add the correct display in all browsers.
+}
+
+template {
+  display: none; // Add the correct display in IE 10+.
+}
+
+[hidden] {
+  display: none; //  Add the correct display in IE 10.
+}
+
+p,
+li {
+  margin: 0;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+section.section {
+  position: relative;
+  overflow: hidden;
+}
+
+tr {
+  line-height: 1.5em;
+}
+
+figure {
+  margin: 0;
+}
+
+blockquote {
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// hide date navigation in input
+input[type='date'] {
+  display: block;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+
+  &::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  &::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    position: relative;
+    right: -10px;
+  }
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    -webkit-appearance: none;
+  }
+}
+
+// hide arrows in input type number
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+textarea,
+input {
+  &::-webkit-input-placeholder {
+    font-size: 16px;
+    color: $black;
+  }
+
+  &::-moz-placeholder {
+    font-size: 16px;
+    color: $black;
+  }
+
+  &:-ms-input-placeholder {
+    font-size: 16px;
+    color: $black;
+  }
+
+  &::placeholder {
+    font-size: 16px;
+    color: $black;
+  }
+}
+
+input {
+  outline: none;
+}
+
+.global-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  min-height: 100vh;
+
+  @include d(1024) {
+    height: auto;
+  }
+}
+
+.main-wrapper.swiper.swiper-fade {
+  height: 100%;
+
+  .swiper-pagination {
+    top: 0;
+    right: 0;
+  }
+}
+
+
+
+
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.main,
+main {
+  display: block;
+  position: relative;
+  height: 100%;
+  padding-top: 105px;
+
+  @include d(1280) {
+    padding-top: 75px;
+  }
+
+  @include d(768) {
+    padding-top: 150px;
+  }
+
+  .container {
+    height: 100%;
+  }
+}
+
+.locked {
+  overflow: hidden;
+}
+
+// project typography
+.title-1 {
+  @extend h1;
+}
+
+.title-2 {
+  @extend h2;
+}
+
+.title-3 {
+  @extend h3;
+}
+
+.title-4 {
+  @extend h4;
+}
+
+.title-5 {
+  @extend h5;
+}
+
+.title-6 {
+  @extend h6;
+}
+
+.section {
+  width: 100%;
+  height: 100%;
+
+  &__content {
+    transition: opacity $hover-duration $timing;
+
+    &_inner {
+      max-width: 90%;
+      margin: 0 auto;
+
+      @include d(1024) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__navigation {
+    position: absolute;
+    top: 330px;
+    left: 0;
+    width: 100%;
+    transform: translate(0, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity $hover-duration $timing;
+    z-index: 10;
+
+    @include d(1024) {
+      display: none;
+    }
+
+    &.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-rtl .swiper-button-next:after,
+    .swiper-button-next:after,
+    .swiper-rtl .swiper-button-prev:after {
+      content: "";
+      width: 32px;
+      flex: 0 0 32px;
+      height: 32px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(../img/arrow-left.svg);
+    }
+
+    .swiper-button-next:after,
+    .swiper-rtl .swiper-button-prev:after {
+
+      background-image: url(../img/arrow-right.svg);
+    }
+  }
+
+  &__btn {
+    position: relative;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -15px;
+    flex-wrap: wrap;
+  }
+
+  &__col {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 15px;
+
+    @include d(768) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__img {
+    position: relative;
+    background-color: rgba($white, .16);
+    border-radius: 24px;
+    padding-bottom: 24px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+
+    // max-height: 450px;
+    img {
+      object-fit: contain;
+      height: 100%;
+    }
+
+    &_mid {
+      img {
+        object-fit: contain;
+        height: 100%;
+      }
+    }
+
+    &_space {
+      img {
+        padding: 0 24px;
+
+      }
+    }
+
+    &-title {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      font-family: "PoppinsSemiBold";
+      flex-wrap: wrap;
+      padding: 24px 24px 27px 24px;
+
+      p {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 12px;
+
+    li {
+      position: relative;
+      line-height: 1em;
+      padding-left: 16px;
+      margin-bottom: 5px;
+
+      &:not(:last-child) {
+        margin-right: 14px;
+      }
+
+      &::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__anim {
+    padding-top: 45px;
+  }
+
+  &__table {
+    overflow-x: auto;
+    padding-bottom: 5px;
+
+    /* width */
+    &::-webkit-scrollbar {
+      width: 3px;
+      height: 3px;
+      background-color: transparent;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+      border-radius: 3px;
+      transition: background $hover-duration $timing;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: transparent;
+    }
+
+    .section__img-title {
+      padding-bottom: 0;
+    }
+
+    table {
+      font-size: 10px;
+      color: $white;
+      text-align: right;
+      border: none;
+      border-collapse: collapse;
+      width: 100%;
+
+      th {
+        height: 31px;
+        background-color: rgba($white, .08);
+        text-transform: uppercase;
+
+        &:first-child {
+          text-align: left;
+          padding-left: 24px;
+          padding-right: 0;
+        }
+
+        &:last-child {
+          padding-right: 24px;
+        }
+      }
+
+      tr {
+        line-height: 15px;
+
+        &:nth-child(2) {
+          td {
+            padding-top: 16px;
+            font-family: "PoppinsBold", sans-serif;
+
+            &:first-child {
+              color: $green;
+            }
+          }
+        }
+
+        &:nth-child(5) {
+          td {
+            padding-bottom: 16px;
+          }
+        }
+
+        &:nth-child(6) {
+          td {
+            border-top: 1px solid rgba($white, .08);
+            padding-top: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba($white, .08);
+            font-family: "PoppinsBold", sans-serif;
+            &:first-child {
+              color: $green;
+            }
+
+          }
+        }
+
+        &:nth-child(7),
+        &:nth-child(10) {
+          td {
+            padding-top: 16px;
+            font-family: "PoppinsBold", sans-serif;
+            &:first-child {
+              color: $green;
+            }
+          }
+        }
+        &:nth-child(9) {
+          td {
+            padding-bottom: 16px;
+          }
+        }
+
+        td {
+          padding: 4px 8px;
+
+          &:first-child {
+            text-align: left;
+            padding-left: 24px;
+            padding-right: 0;
+          }
+
+          &:last-child {
+            padding-right: 24px;
+          }
+        }
+
+        &:nth-child(2) {
+          color: $white;
+
+          td {
+            &:first-child {
+              color: $green;
+            }
+          }
+        }
+
+        &:nth-child(9),
+        &:nth-child(10),
+        &:nth-child(11),
+        &:nth-child(12),
+        &:nth-child(13),
+        &:nth-child(14) {
+          td {
+            &:first-child {
+              font-family: "PoppinsMedium", sans-serif;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  background-color: $primary;
+  text-align: center;
+  color: $white;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  height: 60px;
+  width: 192px;
+  font-size: 16px;
+  padding: 0;
+  border: 1px solid $primary;
+  font-family: "PoppinsSemiBold", sans-serif;
+  transition: background-color $hover-duration $timing, color $hover-duration $timing;
+
+  &:hover {
+    background-color: transparent;
+    color: $primary;
+  }
+
+  @include d(1024) {
+    height: 50px;
+    line-height: 40px;
+  }
+}
+
+.bg {
+  &-blue {
+    &::before {
+      background-color: $blue;
+    }
+  }
+
+  &-green {
+    &::before {
+      background-color: $green;
+    }
+  }
+
+  &-orange {
+    &::before {
+      background-color: $orange;
+    }
+  }
+
+  &-violet {
+    &::before {
+      background-color: $violet;
+    }
+  }
+
+  &-yellow {
+    &::before {
+      background-color: $yellow;
+    }
+  }
+
+  &-red {
+    &::before {
+      background-color: $red;
+    }
+  }
+}
