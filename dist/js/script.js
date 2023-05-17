@@ -8,31 +8,8 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 //Init Scrollbar
 var footer = document.querySelector(".footer");
 var nav = document.querySelector(".section__navigation");
-// footer.style.opacity = 0;
-
 var animation = document.getElementById("anim1");
 animation.stop();
-// animation.intermission()
-// console.log(animation.totalFrames);
-// animation.addEventListener("ready", () => {
-//   console.log("You've captured the ready event!");
-// });
-
-// var container = document.getElementById("anim1"),
-//   anim = lottie.loadAnimation({
-//     container: container,
-//     renderer: "svg",
-//     loop: false,
-//     autoplay: true,
-//     path: "../img/animation.json"
-//   });
-
-// anim.addEventListener("enterFrame", function (animation) {
-//   if (animation.currentTime > (anim.totalFrames - 1)) {
-//     anim.pause();
-//   }
-// });
-
 var slider = new Swiper(".main-wrapper", (_Swiper = {
   grabCursor: false,
   // loop: false,
@@ -98,7 +75,9 @@ var btn = document.querySelector(".btn");
 btn.addEventListener("click", function () {
   slider.slideNext();
 });
-function openTab(evt, cityName) {
+
+// data source tabs *****************************************
+function openTab(evt, tabName) {
   var i, tabContent, tabLinks;
   tabContent = document.getElementsByClassName("tab__content");
   for (i = 0; i < tabContent.length; i++) {
@@ -108,12 +87,12 @@ function openTab(evt, cityName) {
   for (i = 0; i < tabLinks.length; i++) {
     tabLinks[i].className = tabLinks[i].className.replace(" active", "");
   }
-  document.getElementById(cityName).classList.add("active");
+  document.getElementById(tabName).classList.add("active");
   evt.currentTarget.className += " active";
 }
-var tabBtns = document.querySelectorAll(".tab__links");
+var tabButtons = document.querySelectorAll(".tab__links");
 var toggleTab = function toggleTab() {
-  tabBtns.forEach(function (tabBtn) {
+  tabButtons.forEach(function (tabBtn) {
     tabBtn.addEventListener("click", function (e) {
       var target = e.target.getAttribute("data-href");
       openTab(e, target);
@@ -121,3 +100,57 @@ var toggleTab = function toggleTab() {
   });
 };
 toggleTab();
+var periodBtn = document.querySelector("#periodBtn");
+var segmentationTables = document.querySelectorAll(".segmentation-table");
+periodBtn.addEventListener("click", function (e) {
+  e.target.classList.add("active");
+  // document.querySelector(".segmentation-table").classList.add("active");
+  segmentationTables.forEach(function (table) {
+    table.classList.add("active");
+  });
+});
+
+// segmentation screen tabs *****************************************
+function openSegmentationTab(evt, tabName) {
+  var i, tabContent, tabLinks;
+  tabContent = document.getElementsByClassName("segmentation-tab__content");
+  for (i = 0; i < tabContent.length; i++) {
+    tabContent[i].classList.remove("active");
+  }
+  tabLinks = document.getElementsByClassName("segmentation_tab__btn");
+  for (i = 0; i < tabLinks.length; i++) {
+    tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).classList.add("active");
+  evt.currentTarget.className += " active";
+}
+var segmentationButtons = document.querySelectorAll(".segmentation_tab__btn");
+var toggleSegmentationTab = function toggleSegmentationTab() {
+  segmentationButtons.forEach(function (tabBtn) {
+    tabBtn.addEventListener("click", function (e) {
+      var target = e.target.getAttribute("data-href");
+      periodBtn.classList.remove("active");
+      segmentationTables.forEach(function (table) {
+        table.classList.remove("active");
+      });
+      openSegmentationTab(e, target);
+    });
+  });
+};
+toggleSegmentationTab();
+
+// Fix table head
+function tableFixHead(e) {
+  var el = e.target,
+    sT = el.scrollTop;
+  el.querySelectorAll("table th").forEach(function (th) {
+    return (
+      // th.classList.add("fixed")
+      // th.style.transform = `translateY(${sT}px)`,
+      th.style.cssText = "transform: translateY(".concat(sT, "px);")
+    );
+  });
+}
+document.querySelectorAll(".segmentation-table_scroll").forEach(function (el) {
+  return el.addEventListener("scroll", tableFixHead);
+});

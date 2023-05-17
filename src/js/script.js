@@ -1,30 +1,9 @@
 //Init Scrollbar
 const footer = document.querySelector(".footer");
 const nav = document.querySelector(".section__navigation");
-// footer.style.opacity = 0;
 
 let animation = document.getElementById("anim1");
 animation.stop();
-// animation.intermission()
-// console.log(animation.totalFrames);
-// animation.addEventListener("ready", () => {
-//   console.log("You've captured the ready event!");
-// });
-
-// var container = document.getElementById("anim1"),
-//   anim = lottie.loadAnimation({
-//     container: container,
-//     renderer: "svg",
-//     loop: false,
-//     autoplay: true,
-//     path: "../img/animation.json"
-//   });
-
-// anim.addEventListener("enterFrame", function (animation) {
-//   if (animation.currentTime > (anim.totalFrames - 1)) {
-//     anim.pause();
-//   }
-// });
 
 const slider = new Swiper(".main-wrapper", {
   grabCursor: false,
@@ -101,8 +80,8 @@ btn.addEventListener("click", () => {
 });
 
 
-
-function openTab(evt, cityName) {
+// data source tabs *****************************************
+function openTab(evt, tabName) {
   let i, tabContent, tabLinks;
   tabContent = document.getElementsByClassName("tab__content");
   for (i = 0; i < tabContent.length; i++) {
@@ -112,17 +91,76 @@ function openTab(evt, cityName) {
   for (i = 0; i < tabLinks.length; i++) {
     tabLinks[i].className = tabLinks[i].className.replace(" active", "");
   }
-  document.getElementById(cityName).classList.add("active");
+  document.getElementById(tabName).classList.add("active");
   evt.currentTarget.className += " active";
 }
 
-const tabBtns = document.querySelectorAll(".tab__links");
+const tabButtons = document.querySelectorAll(".tab__links");
 const toggleTab = () => {
-  tabBtns.forEach(tabBtn => {
+  tabButtons.forEach(tabBtn => {
     tabBtn.addEventListener("click", (e) => {
       let target = e.target.getAttribute("data-href");
       openTab(e, target)
     })
   });
 };
-toggleTab()
+toggleTab();
+
+
+const periodBtn = document.querySelector("#periodBtn");
+const segmentationTables = document.querySelectorAll(".segmentation-table");
+
+periodBtn.addEventListener("click", (e) => {
+  e.target.classList.add("active");
+  // document.querySelector(".segmentation-table").classList.add("active");
+  segmentationTables.forEach((table) => {
+    table.classList.add("active");
+  });
+});
+
+// segmentation screen tabs *****************************************
+function openSegmentationTab(evt, tabName) {
+  let i, tabContent, tabLinks;
+  tabContent = document.getElementsByClassName("segmentation-tab__content");
+  for (i = 0; i < tabContent.length; i++) {
+    tabContent[i].classList.remove("active");
+  }
+  tabLinks = document.getElementsByClassName("segmentation_tab__btn");
+  for (i = 0; i < tabLinks.length; i++) {
+    tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).classList.add("active");
+  evt.currentTarget.className += " active";
+}
+
+const segmentationButtons = document.querySelectorAll(".segmentation_tab__btn");
+const toggleSegmentationTab = () => {
+  segmentationButtons.forEach(tabBtn => {
+    tabBtn.addEventListener("click", (e) => {
+      let target = e.target.getAttribute("data-href");
+      periodBtn.classList.remove("active");
+      segmentationTables.forEach((table) => {
+        table.classList.remove("active");
+      });
+      openSegmentationTab(e, target)
+    })
+  });
+};
+toggleSegmentationTab();
+
+
+// Fix table head
+function tableFixHead(e) {
+  const el = e.target,
+    sT = el.scrollTop;
+  el.querySelectorAll("table th").forEach(th =>
+    // th.classList.add("fixed")
+    // th.style.transform = `translateY(${sT}px)`,
+    th.style.cssText = `transform: translateY(${sT}px);`
+  );
+}
+document.querySelectorAll(".segmentation-table_scroll").forEach(el =>
+  el.addEventListener("scroll", tableFixHead)
+);
+
+

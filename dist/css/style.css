@@ -1166,6 +1166,320 @@ main .container {
 
 /* Style the tab */
 
+.segmentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+}
+
+.segmentation-tab {
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.segmentation-tab__link {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 11px 17px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  color: #ffffff;
+  background-color: rgba(89, 165, 254, 0.16);
+  border-radius: 8px;
+  font-family: "PoppinsSemiBold";
+  font-size: 14px;
+  -webkit-transition: color 0.5s, cubic-bezier(0.17, 0.67, 0.55, 1.05);
+  -o-transition: color 0.5s, cubic-bezier(0.17, 0.67, 0.55, 1.05);
+  transition: color 0.5s, cubic-bezier(0.17, 0.67, 0.55, 1.05);
+}
+
+.segmentation-tab__link.active {
+  background-color: rgba(89, 165, 254, 0.32);
+  color: #59A5FE;
+}
+
+.segmentation-tab__link:not(:last-child) {
+  margin-right: 10px;
+}
+
+.segmentation-tab__content {
+  display: none;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.segmentation-tab__content.active {
+  display: block;
+}
+
+.segmentation-table {
+  background-color: rgba(255, 255, 255, 0.08);
+  margin: 0 auto;
+  max-width: 416px;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.segmentation-table::after {
+  content: "";
+  width: 100%;
+  background-color: #555b7f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 31px;
+  z-index: -1;
+}
+
+.segmentation-table.active {
+  max-width: 864px;
+  -webkit-transition: 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+  -o-transition: 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+  transition: 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+}
+
+.segmentation-table.active table {
+  -webkit-transition: 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+  -o-transition: 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+  transition: 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+}
+
+.segmentation-table.active table th:nth-child(2),
+.segmentation-table.active table th:nth-child(3),
+.segmentation-table.active table th:nth-child(4),
+.segmentation-table.active table th:nth-child(5) {
+  width: auto;
+  overflow: hidden;
+  max-width: initial;
+}
+
+.segmentation-table.active table td:nth-child(2),
+.segmentation-table.active table td:nth-child(3),
+.segmentation-table.active table td:nth-child(4),
+.segmentation-table.active table td:nth-child(5) {
+  width: auto;
+  max-width: initial;
+  padding: 4px 0;
+}
+
+.segmentation-table_scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 371px;
+  border-radius: 24px;
+  padding: 0 16px 0 24px;
+  position: relative;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.segmentation-table_scroll::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  background-color: transparent;
+}
+
+.segmentation-table_scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.segmentation-table_scroll::-webkit-scrollbar-thumb {
+  background: #555b7f;
+  border-radius: 3px;
+  -webkit-transition: background 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+  transition: background 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+}
+
+.segmentation-table_scroll::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+.segmentation-table table {
+  font-size: 14px;
+  color: #ffffff;
+  text-align: right;
+  line-height: 21px;
+  border: none;
+  border-collapse: collapse;
+  border-radius: 24px;
+  width: 100%;
+}
+
+.segmentation-table table th {
+  -webkit-transition: width 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+  -o-transition: width 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+  transition: width 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+  height: 31px;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #C0C0C7;
+  position: relative;
+}
+
+.segmentation-table table th::before {
+  content: "";
+  width: calc(100% + 60px);
+  background-color: #555b7f;
+  position: absolute;
+  top: 0;
+  left: -24px;
+  height: 100%;
+  z-index: -1;
+}
+
+.segmentation-table table th:first-child {
+  text-align: left;
+  padding-left: 0;
+}
+
+.segmentation-table table th:nth-child(2),
+.segmentation-table table th:nth-child(3),
+.segmentation-table table th:nth-child(4),
+.segmentation-table table th:nth-child(5) {
+  width: 0px;
+  padding: 0;
+  overflow: hidden;
+  max-width: 0px;
+}
+
+.segmentation-table table tr:last-child td {
+  padding-bottom: 16px;
+}
+
+.segmentation-table table tr td {
+  padding: 4px 0;
+}
+
+.segmentation-table table tr td:nth-child(2),
+.segmentation-table table tr td:nth-child(3),
+.segmentation-table table tr td:nth-child(4),
+.segmentation-table table tr td:nth-child(5) {
+  width: 0px;
+  padding: 0;
+  overflow: hidden;
+  max-width: 0px;
+}
+
+.segmentation-table table tr td:first-child {
+  text-align: left;
+  padding-right: 0;
+}
+
+.segmentation-table_1 table tr:nth-child(2) td {
+  padding-top: 16px;
+}
+
+.segmentation-table_1 table tr:nth-child(2) td:first-child {
+  color: #63B866;
+  font-family: "PoppinsBold", sans-serif;
+}
+
+.segmentation-table_1 table tr:nth-child(5) td {
+  padding-bottom: 16px;
+}
+
+.segmentation-table_1 table tr:nth-child(6) td {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.segmentation-table_1 table tr:nth-child(6) td:first-child {
+  color: #63B866;
+  font-family: "PoppinsBold", sans-serif;
+}
+
+.segmentation-table_1 table tr:nth-child(7) td,
+.segmentation-table_1 table tr:nth-child(10) td {
+  padding-top: 16px;
+  font-family: "PoppinsBold", sans-serif;
+}
+
+.segmentation-table_1 table tr:nth-child(7) td:first-child,
+.segmentation-table_1 table tr:nth-child(10) td:first-child {
+  color: #63B866;
+}
+
+.segmentation-table_1 table tr:nth-child(9) td {
+  padding-bottom: 16px;
+}
+
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#periodBtn {
+  background-color: rgba(30, 215, 96, 0.16);
+}
+
+#periodBtn.active {
+  background-color: rgba(30, 215, 96, 0.32);
+  color: #1ED760;
+}
+
+table tr.bold-green {
+  font-family: "PoppinsBold";
+}
+
+table tr.bold-green td {
+  padding-top: 28px;
+  position: relative;
+}
+
+table tr.bold-green td::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.08);
+  position: absolute;
+  top: 8px;
+  left: 0;
+}
+
+table tr.bold-green td:first-child {
+  color: #63B866;
+}
+
+table tr.green td:first-child {
+  color: #63B866;
+}
+
+/* Style the tab */
+
 .tab {
   position: relative;
   display: -webkit-box;
