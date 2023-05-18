@@ -84,17 +84,6 @@
         transition: $hover-duration $timing;
 
         th {
-          // padding: 0 4px;
-          // &::after {
-          //   content: "";
-          //   width: 100%;
-          //   background-color: #555b7f;
-          //   position: absolute;
-          //   top: 0;
-          //   left: 0;
-          //   height: 31px;
-          //   z-index: -1;
-          // }
 
           &:nth-child(2),
           &:nth-child(3),
@@ -116,8 +105,29 @@
             // padding: 4px 8px;
             // overflow: hidden;
             max-width: initial;
-            padding: 4px 0;
+            // padding: 4px 0;
             // display: none;
+          }
+        }
+
+        tr {
+          &:last-child {
+            td {
+              padding-bottom: 16px;
+            }
+          }
+
+          &:nth-child(2) {
+            td {
+              padding-bottom: 4px;
+            }
+          }
+
+          &.bold-green {
+            td {
+              padding-top: 22px;
+              padding-bottom: 4px;
+            }
           }
         }
       }
@@ -358,10 +368,23 @@ table {
     &.bold-green {
       font-family: 'PoppinsBold';
 
+      &.no-border {
+        td {
+          padding-top: 22px;
+
+          &::before {
+            display: none;
+          }
+        }
+
+      }
+
       td {
-        padding-top: 28px;
+        padding-top: 22px;
         // border-top: 1px solid rgba($white, 0.08);
         position: relative;
+        z-index: -1;
+
         &::before {
           content: "";
           width: 100%;
@@ -371,6 +394,7 @@ table {
           top: 8px;
           left: 0;
         }
+
         &:first-child {
           color: $green;
         }
@@ -386,6 +410,4 @@ table {
       }
     }
   }
-
-
 }

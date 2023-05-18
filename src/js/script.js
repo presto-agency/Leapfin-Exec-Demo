@@ -163,4 +163,35 @@ document.querySelectorAll(".segmentation-table_scroll").forEach(el =>
   el.addEventListener("scroll", tableFixHead)
 );
 
+document.querySelectorAll(".logic-table_bottom").forEach(el =>
+  el.addEventListener("scroll", tableFixHead)
+);
+
+
+
+function openLogicTab(evt, cityName) {
+  let i, tabContent, tabLinks;
+  tabContent = document.getElementsByClassName("logic-tab__content");
+  for (i = 0; i < tabContent.length; i++) {
+    tabContent[i].style.display = "none";
+  }
+  tabLinks = document.getElementsByClassName("logic-tab__link blue");
+  for (i = 0; i < tabLinks.length; i++) {
+    tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+const tabBtns = document.querySelectorAll(".logic-tab__link.blue");
+const toggleLogicTab = () => {
+  tabBtns.forEach(tabBtn => {
+    tabBtn.addEventListener("click", (e) => {
+      let target = e.target.getAttribute("data-href");
+      openLogicTab(e, target)
+    })
+  });
+};
+toggleLogicTab()
+
 

@@ -90,11 +90,15 @@ h6,
 }
 
 h1,
+.title-1 {
+  margin-bottom: 83px;
+}
+
+h1,
 .title-1,
 h2,
 .title-2 {
   font-size: 32px;
-  margin-bottom: 83px;
 }
 
 h1 span,
@@ -102,11 +106,6 @@ h1 span,
 h2 span,
 .title-2 span {
   color: #1ED760;
-}
-
-h2,
-.title-2 {
-  margin-bottom: 40px;
 }
 
 h3,
@@ -513,6 +512,11 @@ main .container {
 
 .section__title {
   text-align: center;
+  margin-bottom: 40px;
+}
+
+.section__title p {
+  color: #C0C0C7;
 }
 
 .section__navigation {
@@ -1275,7 +1279,19 @@ main .container {
 .segmentation-table.active table td:nth-child(5) {
   width: auto;
   max-width: initial;
-  padding: 4px 0;
+}
+
+.segmentation-table.active table tr:last-child td {
+  padding-bottom: 16px;
+}
+
+.segmentation-table.active table tr:nth-child(2) td {
+  padding-bottom: 4px;
+}
+
+.segmentation-table.active table tr.bold-green td {
+  padding-top: 22px;
+  padding-bottom: 4px;
 }
 
 .segmentation-table_scroll {
@@ -1455,9 +1471,18 @@ table tr.bold-green {
   font-family: "PoppinsBold";
 }
 
+table tr.bold-green.no-border td {
+  padding-top: 22px;
+}
+
+table tr.bold-green.no-border td::before {
+  display: none;
+}
+
 table tr.bold-green td {
-  padding-top: 28px;
+  padding-top: 22px;
   position: relative;
+  z-index: -1;
 }
 
 table tr.bold-green td::before {
@@ -1476,6 +1501,287 @@ table tr.bold-green td:first-child {
 
 table tr.green td:first-child {
   color: #63B866;
+}
+
+.logic {
+  /* Style the tab */
+}
+
+.logic-tab {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+
+.logic-tab__link {
+  padding: 8px 16px;
+  height: 37px;
+  white-space: nowrap;
+  font-family: "PoppinsSemiBold";
+  background-color: rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #C0C0C7;
+  cursor: default;
+  margin-bottom: 10px;
+}
+
+.logic-tab__link:not(:last-child) {
+  margin-right: 10px;
+}
+
+.logic-tab__link.btn-arrows {
+  margin-right: 50px;
+}
+
+.logic-tab__link.blue {
+  cursor: pointer;
+  background-color: #2B3D74;
+  color: #ffffff;
+  -webkit-transition: color 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05), background-color 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+  -o-transition: color 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05), background-color 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+  transition: color 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05), background-color 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+}
+
+.logic-tab__link.blue.active {
+  color: #59A5FE;
+  background-color: #38579A;
+}
+
+.logic-tab__link.green {
+  cursor: pointer;
+  background-color: rgba(30, 215, 96, 0.16);
+  color: #1ED760;
+}
+
+.logic-tab__content {
+  display: none;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+.logic-tab__content.active {
+  display: block;
+}
+
+.logic-table {
+  background-color: rgba(255, 255, 255, 0.16);
+  margin: 0 auto;
+  position: relative;
+  border-radius: 24px;
+  max-width: 840px;
+  overflow: hidden;
+}
+
+.logic-table_lg {
+  height: 420px;
+}
+
+.logic-table_lg .logic-table_bottom {
+  height: 100%;
+}
+
+.logic-table:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.logic-table::after {
+  content: "";
+  width: 100%;
+  background-color: #555b7f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 31px;
+  z-index: -1;
+}
+
+.logic-table_top {
+  height: auto;
+  border-radius: 24px;
+  padding: 0 16px 0 24px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.logic-table_top table tr th:nth-child(2),
+.logic-table_top table tr td:nth-child(2) {
+  text-align: left;
+}
+
+.logic-table_top table tr td {
+  padding: 16px 0;
+}
+
+.logic-table_top table tr td:first-child {
+  font-family: "PoppinsSemiBold";
+}
+
+.logic-table_top table tr:not(:last-child) td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logic-table_bottom {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 210px;
+  border-radius: 24px;
+  padding: 0 16px 0 24px;
+  position: relative;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.logic-table_bottom::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  background-color: transparent;
+}
+
+.logic-table_bottom::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.logic-table_bottom::-webkit-scrollbar-thumb {
+  background: #555b7f;
+  border-radius: 3px;
+  -webkit-transition: background 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+  transition: background 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+}
+
+.logic-table_bottom::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+.logic-table_bottom table tr td {
+  padding: 8px 0;
+}
+
+.logic-table_bottom table tr td:not(:first-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logic-table_bottom table tr td:not(:empty):first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: "PoppinsSemiBold";
+  padding-top: 16px;
+}
+
+.logic-table table {
+  font-size: 14px;
+  color: #ffffff;
+  text-align: right;
+  line-height: 21px;
+  border: none;
+  border-collapse: collapse;
+  border-radius: 24px;
+  width: 100%;
+}
+
+.logic-table table th {
+  -webkit-transition: width 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+  -o-transition: width 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+  transition: width 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+  height: 31px;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: #C0C0C7;
+  position: relative;
+}
+
+.logic-table table th::before {
+  content: "";
+  width: calc(100% + 60px);
+  background-color: #555b7f;
+  position: absolute;
+  top: 0;
+  left: -24px;
+  height: 100%;
+  z-index: -1;
+}
+
+.logic-table table th:first-child {
+  text-align: left;
+  padding-left: 0;
+}
+
+.logic-table table tr:last-child td {
+  padding-bottom: 16px;
+}
+
+.logic-table table tr td:first-child {
+  text-align: left;
+  padding-right: 0;
+}
+
+.logic-table_1 table tr:nth-child(2) td {
+  padding-top: 16px;
+}
+
+.logic-table_1 table tr:nth-child(2) td:first-child {
+  color: #63B866;
+  font-family: "PoppinsBold", sans-serif;
+}
+
+.logic-table_1 table tr:nth-child(5) td {
+  padding-bottom: 16px;
+}
+
+.logic-table_1 table tr:nth-child(6) td {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logic-table_1 table tr:nth-child(6) td:first-child {
+  color: #63B866;
+  font-family: "PoppinsBold", sans-serif;
+}
+
+.logic-table_1 table tr:nth-child(7) td,
+.logic-table_1 table tr:nth-child(10) td {
+  padding-top: 16px;
+  font-family: "PoppinsBold", sans-serif;
+}
+
+.logic-table_1 table tr:nth-child(7) td:first-child,
+.logic-table_1 table tr:nth-child(10) td:first-child {
+  color: #63B866;
+}
+
+.logic-table_1 table tr:nth-child(9) td {
+  padding-bottom: 16px;
+}
+
+.btn-arrows {
+  position: relative;
+}
+
+.btn-arrows::after {
+  content: "";
+  width: 50px;
+  height: 5px;
+  position: absolute;
+  left: 99%;
+  z-index: -1;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  background-image: url(../img/logic-arrow.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Style the tab */

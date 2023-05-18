@@ -52,11 +52,12 @@ h6 {
   font-family: 'PoppinsSemibold', sans-serif;
   line-height: 1.688em;
 }
-
+h1 {
+  margin-bottom: 83px;
+}
 h1,
 h2 {
   font-size: 32px;
-  margin-bottom: 83px;
 
   span {
     color: $primary;
@@ -64,7 +65,7 @@ h2 {
 }
 
 h2 {
-  margin-bottom: 40px;
+  // margin-bottom: 40px;
 }
 
 h3 {
@@ -490,6 +491,10 @@ main {
 
   &__title {
     text-align: center;
+    margin-bottom: 40px;
+    p {
+      color: $gray;
+    }
   }
 
   &__navigation {
@@ -718,6 +723,7 @@ main {
             padding-bottom: 16px;
             border-bottom: 1px solid rgba($white, .08);
             font-family: "PoppinsBold", sans-serif;
+
             &:first-child {
               color: $green;
             }
@@ -730,11 +736,13 @@ main {
           td {
             padding-top: 16px;
             font-family: "PoppinsBold", sans-serif;
+
             &:first-child {
               color: $green;
             }
           }
         }
+
         &:nth-child(9) {
           td {
             padding-bottom: 16px;

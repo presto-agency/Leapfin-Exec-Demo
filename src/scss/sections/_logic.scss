@@ -1,0 +1,323 @@
+.logic {
+
+  /* Style the tab */
+  &-tab {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    // gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  &-tab__link {
+    padding: 8px 16px;
+    height: 37px;
+    white-space: nowrap;
+    font-family: 'PoppinsSemiBold';
+    background-color: rgba(255, 255, 255, 0.16);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: $gray;
+    cursor: default;
+    margin-bottom: 10px;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &.btn-arrows {
+      margin-right: 50px;
+    }
+
+    &.blue {
+      cursor: pointer;
+      background-color: #2B3D74;
+      color: $white;
+      transition: color $hover-duration $timing, background-color $hover-duration $timing;
+
+      &.active {
+        color: $blue;
+        background-color: #38579A;
+      }
+    }
+
+    &.green {
+      cursor: pointer;
+      background-color: rgba(30, 215, 96, 0.16);
+      color: $primary;
+    }
+  }
+
+
+  &-tab__content {
+    display: none;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &-table {
+    background-color: rgba($white, .16);
+    margin: 0 auto;
+    position: relative;
+    border-radius: 24px;
+    max-width: 840px;
+    overflow: hidden;
+
+    &_lg {
+      height: 420px;
+
+      .logic-table_bottom {
+        height: 100%;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      background-color: #555b7f;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 31px;
+      z-index: -1;
+    }
+
+    &_top {
+      height: auto;
+      border-radius: 24px;
+      padding: 0 16px 0 24px;
+      position: relative;
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      table {
+        tr {
+
+          th,
+          td {
+            &:nth-child(2) {
+              text-align: left;
+            }
+          }
+
+          td {
+            padding: 16px 0;
+
+            &:first-child {
+              font-family: 'PoppinsSemiBold';
+            }
+          }
+
+          &:not(:last-child) {
+            td {
+              border-bottom: 1px solid rgba($white, 0.08);
+            }
+          }
+        }
+      }
+    }
+
+    &_bottom {
+      overflow-x: hidden;
+      overflow-y: auto;
+      height: 210px;
+      border-radius: 24px;
+      padding: 0 16px 0 24px;
+      position: relative;
+
+      &::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+        background-color: transparent;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: #555b7f;
+        border-radius: 3px;
+        transition: background $hover-duration $timing;
+      }
+
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: transparent;
+      }
+
+      table {
+        tr {
+          td {
+            padding: 8px 0;
+
+            &:not(:first-child) {
+              border-bottom: 1px solid rgba($white, 0.08);
+            }
+          }
+
+          td {
+            &:not(:empty) {
+
+              &:first-child {
+                border-top: 1px solid rgba($white, 0.08);
+                // border-top: 1px solid rgba($white, 0.08);
+                font-family: 'PoppinsSemiBold';
+                padding-top: 16px;
+              }
+
+              // &:not(:first-child) {
+              //   border-bottom: 1px solid rgba($white, 0.08);
+              // }
+            }
+          }
+        }
+      }
+
+    }
+
+
+    table {
+      font-size: 14px;
+      color: $white;
+      text-align: right;
+      line-height: 21px;
+      border: none;
+      border-collapse: collapse;
+      border-radius: 24px;
+      width: 100%;
+
+      th {
+        transition: width $hover-duration $timing;
+        height: 31px;
+        text-transform: uppercase;
+        font-size: 10px;
+        color: $gray;
+        position: relative;
+
+        &::before {
+          content: "";
+          width: calc(100% + 60px);
+          background-color: #555b7f;
+          position: absolute;
+          top: 0;
+          left: -24px;
+          height: 100%;
+          z-index: -1;
+        }
+
+        &:first-child {
+          text-align: left;
+          padding-left: 0;
+        }
+      }
+
+      tr {
+
+        &:last-child {
+          td {
+            padding-bottom: 16px;
+          }
+        }
+
+        td {
+          &:first-child {
+            text-align: left;
+            padding-right: 0;
+          }
+        }
+      }
+    }
+
+    &_1 {
+      table {
+        tr {
+          &:nth-child(2) {
+            td {
+              padding-top: 16px;
+
+              &:first-child {
+                color: $green;
+                font-family: "PoppinsBold", sans-serif;
+
+              }
+            }
+          }
+
+          &:nth-child(5) {
+            td {
+              padding-bottom: 16px;
+            }
+          }
+
+          &:nth-child(6) {
+            td {
+              border-top: 1px solid rgba($white, .08);
+              padding-top: 16px;
+              padding-bottom: 16px;
+              border-bottom: 1px solid rgba($white, .08);
+              // font-family: "PoppinsBold", sans-serif;
+
+              &:first-child {
+                color: $green;
+                font-family: "PoppinsBold", sans-serif;
+
+              }
+
+            }
+          }
+
+          &:nth-child(7),
+          &:nth-child(10) {
+            td {
+              padding-top: 16px;
+              font-family: "PoppinsBold", sans-serif;
+
+              &:first-child {
+                color: $green;
+              }
+            }
+          }
+
+          &:nth-child(9) {
+            td {
+              padding-bottom: 16px;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+.btn-arrows {
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 50px;
+    height: 5px;
+    position: absolute;
+    left: 99%;
+    z-index: -1;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-image: url(../img/logic-arrow.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

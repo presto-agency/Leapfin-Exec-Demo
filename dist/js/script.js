@@ -154,3 +154,29 @@ function tableFixHead(e) {
 document.querySelectorAll(".segmentation-table_scroll").forEach(function (el) {
   return el.addEventListener("scroll", tableFixHead);
 });
+document.querySelectorAll(".logic-table_bottom").forEach(function (el) {
+  return el.addEventListener("scroll", tableFixHead);
+});
+function openLogicTab(evt, cityName) {
+  var i, tabContent, tabLinks;
+  tabContent = document.getElementsByClassName("logic-tab__content");
+  for (i = 0; i < tabContent.length; i++) {
+    tabContent[i].style.display = "none";
+  }
+  tabLinks = document.getElementsByClassName("logic-tab__link blue");
+  for (i = 0; i < tabLinks.length; i++) {
+    tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+var tabBtns = document.querySelectorAll(".logic-tab__link.blue");
+var toggleLogicTab = function toggleLogicTab() {
+  tabBtns.forEach(function (tabBtn) {
+    tabBtn.addEventListener("click", function (e) {
+      var target = e.target.getAttribute("data-href");
+      openLogicTab(e, target);
+    });
+  });
+};
+toggleLogicTab();
