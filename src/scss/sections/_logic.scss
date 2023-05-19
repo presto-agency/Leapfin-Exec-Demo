@@ -159,7 +159,14 @@
       }
 
       table {
+        th,
+        td {
+          &:nth-child(2) {
+            text-align: left;
+          }
+        }
         tr {
+
           td {
             padding: 8px 0;
 

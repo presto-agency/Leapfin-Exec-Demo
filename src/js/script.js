@@ -1,10 +1,15 @@
 //Init Scrollbar
 const footer = document.querySelector(".footer");
-const nav = document.querySelector(".section__navigation");
+const footerInner = document.querySelector(".footer_inner");
+
+// const nav = document.querySelector(".section__navigation");
 
 let animation = document.getElementById("anim1");
 animation.stop();
-
+let animation2 = document.getElementById("anim2");
+animation2.stop();
+let pauseElem = document.querySelector('[clip-path="url(#__lottie_element_2517)]"');
+console.log(pauseElem)
 const slider = new Swiper(".main-wrapper", {
   grabCursor: false,
   // loop: false,
@@ -37,18 +42,18 @@ const slider = new Swiper(".main-wrapper", {
     prevEl: ".swiper-button-prev",
   },
   on: {
-    click: function () {
-      if (slider.realIndex === 0) {
-        footer.classList.remove("visible")
-        // slider.navigation.nextEl = ".swiper-button-next"
-        slider.slideNext();
-      }
-    },
+    // click: function () {
+    //   if (slider.realIndex === 0) {
+    //     footer.classList.remove("visible")
+    //     // slider.navigation.nextEl = ".swiper-button-next"
+    //     slider.slideNext();
+    //   }
+    // },
     slideChange: function () {
       console.log(slider.realIndex)
       if (slider.activeIndex === 0) {
         footer.classList.remove("visible");
-        nav.classList.remove("visible");
+        // nav.classList.remove("visible");
         // slider.navigation.nextEl = ".swiper-button-next"
       }
       if (slider.realIndex === 1) {
@@ -56,29 +61,95 @@ const slider = new Swiper(".main-wrapper", {
         // nav.classList.add("visible");
 
       }
-      if (slider.realIndex !== 2) {
+      if (slider.realIndex !== 1) {
         animation.stop();
       }
-      if (slider.realIndex === 2) {
-        nav.classList.remove("visible");
+      if (slider.realIndex === 1) {
         footer.classList.add("visible");
-        // animation.getLottie().totalFrames = 300
         animation.play();
       }
-      if (slider.realIndex === 7) {
+      if (slider.realIndex !== 3) {
+        animation2.stop();
+      }
+      if (slider.realIndex === 3) {
+
+        animation2.getLottie().totalFrames = 200;
+        animation2.play();
+
+        animation2.addEventListener("click", ()=> {
+        console.log("continue")
+
+          animation2.getLottie().totalFrames = 419;
+          animation2.play();
+        });
+        // console.log()
+        // console.log(  animation2.seek(100));
+        // animation2.seek(100);
+      }
+      if (slider.realIndex === 6) {
         footer.classList.remove("visible");
       }
     }
   }
 
 });
+const sliderInner = new Swiper(".slider_inner", {
+  grabCursor: false,
+  allowTouchMove: false,
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true
+  },
+  autoHeight: true,
+  speed: 800,
+  autoHeight: true,
+  on: {
+    click: function () {
+      if (sliderInner.realIndex === 0) {
+        footer.classList.remove("visible")
+        // slider.navigation.nextEl = ".swiper-button-next"
+        sliderInner.slideNext();
+      }
+    },
+    slideChange: function () {
+      console.log(sliderInner.realIndex)
+      if (sliderInner.activeIndex === 0) {
+        footerInner.classList.remove("visible");
+        // nav.classList.remove("visible");
+        // slider.navigation.nextEl = ".swiper-button-next"
+      }
+      if (sliderInner.realIndex === 1) {
+        footerInner.classList.add("visible");
+        // nav.classList.add("visible");
+      }
+      // if (slider.realIndex !== 2) {
+      //   animation.stop();
+      // }
+      // if (slider.realIndex === 2) {
+      //   nav.classList.remove("visible");
+      //   footer.classList.add("visible");
+      //   // animation.getLottie().totalFrames = 300
+      //   animation.play();
+      // }
+      // if (slider.realIndex === 7) {
+      //   footer.classList.remove("visible");
+      // }
+    }
+  }
 
-const btn = document.querySelector(".btn");
+});
+
+const btn = document.querySelector("#btnNav");
+const navBtnInner = document.querySelector("#btnNavInner");
+
 
 btn.addEventListener("click", () => {
   slider.slideNext()
 });
 
+navBtnInner.addEventListener("click", () => {
+  slider.slideNext()
+});
 
 // data source tabs *****************************************
 function openTab(evt, tabName) {

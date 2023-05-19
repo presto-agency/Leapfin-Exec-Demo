@@ -1051,6 +1051,25 @@ main .container {
   pointer-events: auto;
 }
 
+.footer_inner {
+  padding: 40px 0;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+  -o-transition: opacity 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+  transition: opacity 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
+}
+
+.footer_inner.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .section-logos {
   max-width: 700px;
   margin: 0 auto;
@@ -1662,6 +1681,11 @@ table tr.green td:first-child {
   background: transparent;
 }
 
+.logic-table_bottom table th:nth-child(2),
+.logic-table_bottom table td:nth-child(2) {
+  text-align: left;
+}
+
 .logic-table_bottom table tr td {
   padding: 8px 0;
 }
@@ -2243,6 +2267,11 @@ table tr.green td:first-child {
     position: static;
     padding: 40px 0;
   }
+
+  .footer_inner {
+    position: static;
+    padding: 40px 0;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -2283,6 +2312,10 @@ table tr.green td:first-child {
 
 @media only screen and (min-height: 600px) {
   .footer {
+    bottom: 20px;
+  }
+
+  .footer_inner {
     bottom: 20px;
   }
 }

@@ -1,15 +1,22 @@
 "use strict";
 
-var _Swiper;
+var _Swiper, _Swiper2;
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 //Init Scrollbar
 var footer = document.querySelector(".footer");
-var nav = document.querySelector(".section__navigation");
+var footerInner = document.querySelector(".footer_inner");
+
+// const nav = document.querySelector(".section__navigation");
+
 var animation = document.getElementById("anim1");
 animation.stop();
+var animation2 = document.getElementById("anim2");
+animation2.stop();
+var pauseElem = document.querySelector('[clip-path="url(#__lottie_element_2517)]"');
+console.log(pauseElem);
 var slider = new Swiper(".main-wrapper", (_Swiper = {
   grabCursor: false,
   // loop: false,
@@ -37,18 +44,18 @@ var slider = new Swiper(".main-wrapper", (_Swiper = {
   nextEl: ".swiper-button-next",
   prevEl: ".swiper-button-prev"
 }), _defineProperty(_Swiper, "on", {
-  click: function click() {
-    if (slider.realIndex === 0) {
-      footer.classList.remove("visible");
-      // slider.navigation.nextEl = ".swiper-button-next"
-      slider.slideNext();
-    }
-  },
+  // click: function () {
+  //   if (slider.realIndex === 0) {
+  //     footer.classList.remove("visible")
+  //     // slider.navigation.nextEl = ".swiper-button-next"
+  //     slider.slideNext();
+  //   }
+  // },
   slideChange: function slideChange() {
     console.log(slider.realIndex);
     if (slider.activeIndex === 0) {
       footer.classList.remove("visible");
-      nav.classList.remove("visible");
+      // nav.classList.remove("visible");
       // slider.navigation.nextEl = ".swiper-button-next"
     }
 
@@ -57,22 +64,83 @@ var slider = new Swiper(".main-wrapper", (_Swiper = {
       // nav.classList.add("visible");
     }
 
-    if (slider.realIndex !== 2) {
+    if (slider.realIndex !== 1) {
       animation.stop();
     }
-    if (slider.realIndex === 2) {
-      nav.classList.remove("visible");
+    if (slider.realIndex === 1) {
       footer.classList.add("visible");
-      // animation.getLottie().totalFrames = 300
       animation.play();
     }
-    if (slider.realIndex === 7) {
+    if (slider.realIndex !== 3) {
+      animation2.stop();
+    }
+    if (slider.realIndex === 3) {
+      animation2.getLottie().totalFrames = 200;
+      animation2.play();
+      animation2.addEventListener("click", function () {
+        console.log("continue");
+        animation2.getLottie().totalFrames = 419;
+        animation2.play();
+      });
+      // console.log()
+      // console.log(  animation2.seek(100));
+      // animation2.seek(100);
+    }
+
+    if (slider.realIndex === 6) {
       footer.classList.remove("visible");
     }
   }
 }), _Swiper));
-var btn = document.querySelector(".btn");
+var sliderInner = new Swiper(".slider_inner", (_Swiper2 = {
+  grabCursor: false,
+  allowTouchMove: false,
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true
+  },
+  autoHeight: true,
+  speed: 800
+}, _defineProperty(_Swiper2, "autoHeight", true), _defineProperty(_Swiper2, "on", {
+  click: function click() {
+    if (sliderInner.realIndex === 0) {
+      footer.classList.remove("visible");
+      // slider.navigation.nextEl = ".swiper-button-next"
+      sliderInner.slideNext();
+    }
+  },
+  slideChange: function slideChange() {
+    console.log(sliderInner.realIndex);
+    if (sliderInner.activeIndex === 0) {
+      footerInner.classList.remove("visible");
+      // nav.classList.remove("visible");
+      // slider.navigation.nextEl = ".swiper-button-next"
+    }
+
+    if (sliderInner.realIndex === 1) {
+      footerInner.classList.add("visible");
+      // nav.classList.add("visible");
+    }
+    // if (slider.realIndex !== 2) {
+    //   animation.stop();
+    // }
+    // if (slider.realIndex === 2) {
+    //   nav.classList.remove("visible");
+    //   footer.classList.add("visible");
+    //   // animation.getLottie().totalFrames = 300
+    //   animation.play();
+    // }
+    // if (slider.realIndex === 7) {
+    //   footer.classList.remove("visible");
+    // }
+  }
+}), _Swiper2));
+var btn = document.querySelector("#btnNav");
+var navBtnInner = document.querySelector("#btnNavInner");
 btn.addEventListener("click", function () {
+  slider.slideNext();
+});
+navBtnInner.addEventListener("click", function () {
   slider.slideNext();
 });
 
