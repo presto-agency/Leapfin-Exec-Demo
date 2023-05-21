@@ -54,7 +54,7 @@
   &-table {
     // overflow-x: auto;
     background-color: rgba($white, .08);
-    // background-color: #454b70;
+    background-color: #353b69;
 
     // padding-right: 6px;
     // background-color: #555b7f;
@@ -72,7 +72,7 @@
       top: 0;
       left: 0;
       height: 31px;
-      z-index: -1;
+      // z-index: -1;
     }
 
     // padding-right: 24px;
@@ -156,7 +156,7 @@
 
       /* Handle */
       &::-webkit-scrollbar-thumb {
-        background: #555b7f;
+        background-color: #555b7f;
         border-radius: 3px;
         transition: background $hover-duration $timing;
       }
@@ -169,6 +169,8 @@
 
 
     table {
+      position: relative;
+      z-index: 1;
       font-size: 14px;
       color: $white;
       text-align: right;

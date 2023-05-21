@@ -1252,6 +1252,7 @@ main .container {
 
 .segmentation-table {
   background-color: rgba(255, 255, 255, 0.08);
+  background-color: #353b69;
   margin: 0 auto;
   max-width: 416px;
   position: relative;
@@ -1267,7 +1268,6 @@ main .container {
   top: 0;
   left: 0;
   height: 31px;
-  z-index: -1;
 }
 
 .segmentation-table.active {
@@ -1336,7 +1336,7 @@ main .container {
 }
 
 .segmentation-table_scroll::-webkit-scrollbar-thumb {
-  background: #555b7f;
+  background-color: #555b7f;
   border-radius: 3px;
   -webkit-transition: background 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
   transition: background 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
@@ -1347,6 +1347,8 @@ main .container {
 }
 
 .segmentation-table table {
+  position: relative;
+  z-index: 1;
   font-size: 14px;
   color: #ffffff;
   text-align: right;
@@ -1592,6 +1594,7 @@ table tr.green td:first-child {
 
 .logic-table {
   background-color: rgba(255, 255, 255, 0.16);
+  background-color: #454c73;
   margin: 0 auto;
   position: relative;
   border-radius: 24px;
@@ -1619,7 +1622,6 @@ table tr.green td:first-child {
   top: 0;
   left: 0;
   height: 31px;
-  z-index: -1;
 }
 
 .logic-table_top {
@@ -1700,6 +1702,10 @@ table tr.green td:first-child {
   padding-top: 16px;
 }
 
+.logic-table_bottom table tr:nth-child(2) td:first-child {
+  border-top: none;
+}
+
 .logic-table table {
   font-size: 14px;
   color: #ffffff;
@@ -1709,6 +1715,8 @@ table tr.green td:first-child {
   border-collapse: collapse;
   border-radius: 24px;
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .logic-table table th {
