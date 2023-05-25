@@ -853,7 +853,7 @@ main .container {
 }
 
 .header {
-  padding: 40px 0;
+  padding: 40px 0 0 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -1320,6 +1320,7 @@ main .container {
 }
 
 .segmentation-table.active table tr:nth-child(2) td {
+  padding-top: 0;
   padding-bottom: 4px;
 }
 
@@ -1419,6 +1420,10 @@ main .container {
   padding: 0;
   overflow: hidden;
   max-width: 0px;
+}
+
+.segmentation-table table tr:nth-child(2) td {
+  padding-top: 0;
 }
 
 .segmentation-table table tr:last-child td {
@@ -2335,6 +2340,45 @@ table tr.green td:first-child {
 
   .header__logo {
     margin-bottom: 40px;
+  }
+
+  .section-logos__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .section-logos__col {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+
+  .section-logos__content {
+    margin-right: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .section-logos__box {
+    padding: 0 15px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333%;
+            flex: 0 0 33.333%;
+  }
+
+  .section-logos__images {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .section-logos__images > img {
+    display: none;
   }
 }
 
