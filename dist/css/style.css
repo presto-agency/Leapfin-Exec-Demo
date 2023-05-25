@@ -1379,6 +1379,16 @@ main .container {
   width: 100%;
 }
 
+.segmentation-table table span {
+  color: #63B866;
+}
+
+.segmentation-table table strong {
+  padding-top: 16px;
+  display: inline-block;
+  font-family: "PoppinsBold", sans-serif;
+}
+
 .segmentation-table table th {
   -webkit-transition: width 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
   -o-transition: width 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);

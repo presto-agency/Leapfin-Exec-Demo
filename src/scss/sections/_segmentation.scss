@@ -105,7 +105,7 @@
         }
 
         td {
-
+    
           &:nth-child(2),
           &:nth-child(3),
           &:nth-child(4),
@@ -189,7 +189,14 @@
       width: 100%;
       // background-color: rgba($white, .08);
       // margin: 0 auto;
-
+      span {
+        color: $green;
+      }
+      strong {
+        padding-top: 16px;
+        display: inline-block;
+        font-family: "PoppinsBold", sans-serif;
+      }
       th {
         transition: width $hover-duration $timing;
         height: 31px;
