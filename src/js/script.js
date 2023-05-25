@@ -1,7 +1,7 @@
 //Init Scrollbar
 const footer = document.querySelector(".footer");
 const footerInner = document.querySelector(".footer_inner");
-const footerSegmentation = document.querySelector(".footer_segmentation");
+// const footerSegmentation = document.querySelector(".footer_segmentation");
 
 
 // const nav = document.querySelector(".section__navigation");

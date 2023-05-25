@@ -8,7 +8,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 //Init Scrollbar
 var footer = document.querySelector(".footer");
 var footerInner = document.querySelector(".footer_inner");
-var footerSegmentation = document.querySelector(".footer_segmentation");
+// const footerSegmentation = document.querySelector(".footer_segmentation");
 
 // const nav = document.querySelector(".section__navigation");
 
