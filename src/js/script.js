@@ -1,10 +1,6 @@
 //Init Scrollbar
 const footer = document.querySelector(".footer");
 const footerInner = document.querySelector(".footer_inner");
-// const footerSegmentation = document.querySelector(".footer_segmentation");
-
-
-// const nav = document.querySelector(".section__navigation");
 
 let animation = document.getElementById("anim1");
 animation.stop();
@@ -87,7 +83,6 @@ const sliderInner = new Swiper(".slider_inner", {
     click: function () {
       if (sliderInner.realIndex === 0) {
         footer.classList.remove("visible")
-        // slider.navigation.nextEl = ".swiper-button-next"
         sliderInner.slideNext();
       }
     },
@@ -113,15 +108,12 @@ const title = document.querySelector(".segmentation__title");
 
 
 btn.addEventListener("click", () => {
-  slider.slideNext()
+  slider.slideNext();
 });
 
 navBtnInner.addEventListener("click", () => {
-  slider.slideNext()
+  slider.slideNext();
 });
-// navBtnOuter.addEventListener("click", () => {
-//   slider.slideNext()
-// });
 
 // data source tabs *****************************************
 function openTab(evt, tabName) {
@@ -155,7 +147,6 @@ const segmentationTables = document.querySelectorAll(".segmentation-table");
 
 periodBtn.addEventListener("click", (e) => {
   e.target.classList.add("active");
-  // document.querySelector(".segmentation-table").classList.add("active");
   segmentationTables.forEach((table) => {
     table.classList.add("active");
   });
@@ -197,8 +188,6 @@ function tableFixHead(e) {
   const el = e.target,
     sT = el.scrollTop;
   el.querySelectorAll("table th").forEach(th =>
-    // th.classList.add("fixed")
-    // th.style.transform = `translateY(${sT}px)`,
     th.style.cssText = `transform: translateY(${sT}px);`
   );
 }
@@ -245,13 +234,15 @@ document.addEventListener("click", (e) => {
     document.querySelector(".segmentation__title").style.display = "none";
   } else if (tabContent.classList.contains("active")) {
     document.querySelector(".segmentation__title").style.display = "none";
-  } else if (e.target.id !== "chartBtn"){
+  } else if (e.target.id !== "chartBtn") {
     document.querySelector(".segmentation__title").style.display = "block";
   }
 });
 
 
-// const chartBtn = document.querySelector("#chartBtn");
-// chartBtn.addEventListener("click", () => {
-//   document.querySelector(".segmentation__title").style.display = "none";
-// });
+const bullets = document.querySelectorAll(".swiper-pagination-bullet");
+bullets.forEach((bullet) => {
+  bullet.addEventListener("click", () => {
+    sliderInner.slidePrev();
+  });
+})

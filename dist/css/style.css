@@ -657,6 +657,16 @@ main .container {
   margin-right: 14px;
 }
 
+.section__details li span {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
 .section__details li::before {
   content: "";
   width: 8px;
@@ -850,6 +860,11 @@ main .container {
 
 .bg-red::before {
   background-color: #B86363;
+}
+
+.swiper-fade .swiper-slide-active,
+.swiper-fade .swiper-slide-active .swiper-slide-active {
+  z-index: 1;
 }
 
 .header {
@@ -1266,7 +1281,6 @@ main .container {
 }
 
 .segmentation-table {
-  background-color: rgba(255, 255, 255, 0.08);
   background-color: #353b69;
   margin: 0 auto;
   max-width: 416px;

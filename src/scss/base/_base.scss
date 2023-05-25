@@ -8,7 +8,6 @@
 
 html {
   font-size: 100%;
-  // height: 100%;
   -webkit-text-size-adjust: none;
   -webkit-appearance: none;
   max-height: 9001em;
@@ -17,8 +16,6 @@ html {
 }
 
 body {
-  // min-height: 100%;
-  // height: 100%;
   width: 100%;
   min-width: 320px;
   margin: 0; // Remove the margin in all browsers.
@@ -37,8 +34,6 @@ body {
   -webkit-text-size-adjust: 100%;
   backface-visibility: hidden;
   text-rendering: geometricPrecision;
-  // height: 100vh;
-  // width: 100vw;
 }
 
 h1,
@@ -62,10 +57,6 @@ h2 {
   span {
     color: $primary;
   }
-}
-
-h2 {
-  // margin-bottom: 40px;
 }
 
 h3 {
@@ -414,9 +405,6 @@ input {
   }
 }
 
-
-
-
 .container {
   max-width: 1340px;
   margin: 0 auto;
@@ -574,12 +562,6 @@ main {
     justify-content: space-between;
     overflow: hidden;
 
-    // max-height: 450px;
-    img {
-      // object-fit: contain;
-      // height: 100%;
-    }
-
     &_mid {
       img {
         // object-fit: contain;
@@ -623,7 +605,15 @@ main {
       &:not(:last-child) {
         margin-right: 14px;
       }
-
+      span {
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        border-radius: 50%;
+        background-color: #fff;
+      }
       &::before {
         content: "";
         width: 8px;
@@ -852,4 +842,8 @@ main {
       background-color: $red;
     }
   }
+}
+
+.swiper-fade .swiper-slide-active, .swiper-fade .swiper-slide-active .swiper-slide-active {
+  z-index: 1;
 }

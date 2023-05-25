@@ -1,6 +1,5 @@
 /* Style the tab */
 .tab {
-  // overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -105,11 +104,6 @@
       background-color: rgba($green, .2);
       justify-content: center;
 
-      // &::before {
-      //   background-image: url(../img/btn-1.svg);
-      //   height: 130px;
-      // }
-
       img {
         width: auto;
       }
@@ -120,11 +114,6 @@
   &:nth-child(2) {
     .tab__links {
       background-color: rgba($blue, .2);
-
-      // &::before {
-      //   background-image: url(../img/btn-2.svg);
-      //   height: 120px;
-      // }
     }
 
   }
@@ -132,11 +121,6 @@
   &:nth-child(3) {
     .tab__links {
       background-color: rgba($orange, .2);
-
-      // &::before {
-      //   background-image: url(../img/btn-3.svg);
-      //   height: 60px;
-      // }
     }
 
   }
@@ -144,11 +128,6 @@
   &:nth-child(4) {
     .tab__links {
       background-color: rgba($violet, .2);
-
-      // &::before {
-      //   background-image: url(../img/btn-4.svg);
-      //   height: 30px;
-      // }
     }
 
   }
@@ -186,32 +165,9 @@
   }
 
   img {
-    // margin-right: 20px;
     width: 22px;
     pointer-events: none;
   }
-
-  // &::before {
-  //   content: "";
-  //   width: 200px;
-  //   height: auto;
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 100%;
-  //   transform: translate(0, 0);
-  //   background-repeat: no-repeat;
-  //   background-position: center;
-  //   background-size: contain;
-  //   opacity: 0.1;
-  //   transition: opacity $hover-duration $timing;
-  //   @include d(1199) {
-  //     width: 150px;
-  //   }
-  //   @include d(1124) {
-  //     width: 100px;
-  //   }
-  // }
-
 }
 
 
@@ -255,7 +211,6 @@
   }
 
   &:nth-child(2) {
-    // top: 0;
     top: 33%;
 
     @include d(1124) {
@@ -264,7 +219,6 @@
   }
 
   &:nth-child(3) {
-    // top: 0;
     top: 56%;
 
     @include d(1124) {
@@ -286,7 +240,6 @@
     mask-image: none;
     pointer-events: auto;
 
-    // margin-bottom: 24px;
     &:nth-child(1) {
       transform: translateY(-15%);
     }

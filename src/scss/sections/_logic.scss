@@ -5,7 +5,6 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
-    // gap: 10px;
     flex-wrap: wrap;
     margin-bottom: 30px;
   }
@@ -91,7 +90,6 @@
       top: 0;
       left: 0;
       height: 31px;
-      // z-index: -1;
     }
 
     &_top {
@@ -174,7 +172,6 @@
 
             &:not(:first-child) {
               border-bottom: 1px solid rgba($white, 0.08);
-              // border-top: 1px solid #000;
             }
           }
 
@@ -183,25 +180,19 @@
 
               &:first-child {
                 border-top: 1px solid rgba($white, 0.08);
-                // border-top: 1px solid rgba($white, 0.08);
                 font-family: 'PoppinsSemiBold';
                 padding-top: 16px;
               }
           
-              // &:not(:first-child) {
-              //   border-bottom: 1px solid rgba($white, 0.08);
-              // }
             }
           }
           &:nth-child(2) {
-            // &:not(:empty) {
               td {
                 &:first-child {
                   border-top: none;
                 }
               }
            
-            // }
           }
         }
       }
@@ -289,7 +280,6 @@
               padding-top: 16px;
               padding-bottom: 16px;
               border-bottom: 1px solid rgba($white, .08);
-              // font-family: "PoppinsBold", sans-serif;
 
               &:first-child {
                 color: $green;

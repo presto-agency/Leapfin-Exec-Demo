@@ -17,7 +17,6 @@
       padding: 11px 17px;
       transition: $hover-duration;
       color: $white;
-      // background-color: rgba(30, 215, 96, 0.16);
       background-color: rgba(89, 165, 254, 0.16);
       border-radius: 8px;
       font-family: 'PoppinsSemiBold';
@@ -26,7 +25,6 @@
         $timing;
 
       &.active {
-        // background-color: rgba(30, 215, 96, 0.32);
         background-color: rgba(89, 165, 254, 0.32);
         color: $blue;
       }
@@ -51,10 +49,6 @@
       width: 100%;
       min-height: 465px;
 
-      img {
-        // height: 100%;
-      }
-
       &.active {
         display: block;
       }
@@ -62,12 +56,7 @@
   }
 
   &-table {
-    // overflow-x: auto;
-    background-color: rgba($white, .08);
     background-color: #353b69;
-
-    // padding-right: 6px;
-    // background-color: #555b7f;
     margin: 0 auto;
     max-width: 416px;
     position: relative;
@@ -82,17 +71,13 @@
       top: 0;
       left: 0;
       height: 31px;
-      // z-index: -1;
     }
 
-    // padding-right: 24px;
     &.active {
       max-width: 864px;
       transition: $hover-duration $timing;
 
       table {
-        // background-color: rgba($white, .08);
-        // max-width: 864px;
         transition: $hover-duration $timing;
 
         th {
@@ -114,11 +99,7 @@
           &:nth-child(4),
           &:nth-child(5) {
             width: auto;
-            // padding: 4px 8px;
-            // overflow: hidden;
             max-width: initial;
-            // padding: 4px 0;
-            // display: none;
           }
         }
 
@@ -189,11 +170,7 @@
       border: none;
       border-collapse: collapse;
       border-radius: 24px;
-      // overflow: hidden;
       width: 100%;
-
-      // background-color: rgba($white, .08);
-      // margin: 0 auto;
       span {
         color: $green;
       }
@@ -207,7 +184,6 @@
       th {
         transition: width $hover-duration $timing;
         height: 31px;
-        // background-color: rgba($white, .08);
 
         text-transform: uppercase;
         font-size: 10px;
@@ -228,11 +204,6 @@
         &:first-child {
           text-align: left;
           padding-left: 0;
-          // padding-right: 0;
-        }
-
-        &:last-child {
-          // padding-right: 24px;
         }
 
         &:nth-child(2),
@@ -243,7 +214,6 @@
           padding: 0;
           overflow: hidden;
           max-width: 0px;
-          // display: none;
         }
       }
 
@@ -262,8 +232,6 @@
 
         td {
           padding: 4px 0;
-          // transition: $hover-duration $timing;
-
           &:nth-child(2),
           &:nth-child(3),
           &:nth-child(4),
@@ -277,26 +245,9 @@
 
           &:first-child {
             text-align: left;
-            // padding-left: 24px;
             padding-right: 0;
           }
-
-          &:last-child {
-            // padding-right: 24px;
-          }
         }
-
-        // &:nth-child(9),
-        // &:nth-child(10),
-        // &:nth-child(11),
-        // &:nth-child(12),
-        // &:nth-child(13),
-        // &:nth-child(14) {
-        //   td {
-        //     &:first-child {
-        //       font-family: "PoppinsMedium", sans-serif;
-        //     }
-        //   }
       }
     }
 
@@ -327,7 +278,6 @@
               padding-top: 16px;
               padding-bottom: 16px;
               border-bottom: 1px solid rgba($white, .08);
-              // font-family: "PoppinsBold", sans-serif;
 
               &:first-child {
                 color: $green;
@@ -411,7 +361,6 @@ table {
 
       td {
         padding-top: 22px;
-        // border-top: 1px solid rgba($white, 0.08);
         position: relative;
         z-index: -1;
 

@@ -8,10 +8,6 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 //Init Scrollbar
 var footer = document.querySelector(".footer");
 var footerInner = document.querySelector(".footer_inner");
-// const footerSegmentation = document.querySelector(".footer_segmentation");
-
-// const nav = document.querySelector(".section__navigation");
-
 var animation = document.getElementById("anim1");
 animation.stop();
 var animation2 = document.getElementById("anim2");
@@ -81,7 +77,6 @@ var sliderInner = new Swiper(".slider_inner", (_Swiper2 = {
   click: function click() {
     if (sliderInner.realIndex === 0) {
       footer.classList.remove("visible");
-      // slider.navigation.nextEl = ".swiper-button-next"
       sliderInner.slideNext();
     }
   },
@@ -104,9 +99,6 @@ btn.addEventListener("click", function () {
 navBtnInner.addEventListener("click", function () {
   slider.slideNext();
 });
-// navBtnOuter.addEventListener("click", () => {
-//   slider.slideNext()
-// });
 
 // data source tabs *****************************************
 function openTab(evt, tabName) {
@@ -136,7 +128,6 @@ var periodBtn = document.querySelector("#periodBtn");
 var segmentationTables = document.querySelectorAll(".segmentation-table");
 periodBtn.addEventListener("click", function (e) {
   e.target.classList.add("active");
-  // document.querySelector(".segmentation-table").classList.add("active");
   segmentationTables.forEach(function (table) {
     table.classList.add("active");
   });
@@ -176,11 +167,7 @@ function tableFixHead(e) {
   var el = e.target,
     sT = el.scrollTop;
   el.querySelectorAll("table th").forEach(function (th) {
-    return (
-      // th.classList.add("fixed")
-      // th.style.transform = `translateY(${sT}px)`,
-      th.style.cssText = "transform: translateY(".concat(sT, "px);")
-    );
+    return th.style.cssText = "transform: translateY(".concat(sT, "px);");
   });
 }
 document.querySelectorAll(".segmentation-table_scroll").forEach(function (el) {
@@ -223,8 +210,9 @@ document.addEventListener("click", function (e) {
     document.querySelector(".segmentation__title").style.display = "block";
   }
 });
-
-// const chartBtn = document.querySelector("#chartBtn");
-// chartBtn.addEventListener("click", () => {
-//   document.querySelector(".segmentation__title").style.display = "none";
-// });
+var bullets = document.querySelectorAll(".swiper-pagination-bullet");
+bullets.forEach(function (bullet) {
+  bullet.addEventListener("click", function () {
+    sliderInner.slidePrev();
+  });
+});
