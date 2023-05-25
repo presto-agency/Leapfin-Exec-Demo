@@ -1,6 +1,6 @@
 $(document).ready(function () {
-  $('select').niceSelect();
+	$("select").niceSelect();
 });
 
-$('select').niceSelect('update');
-$('select').niceSelect('destroy');
+$("select").niceSelect("update");
+$("select").niceSelect("destroy");

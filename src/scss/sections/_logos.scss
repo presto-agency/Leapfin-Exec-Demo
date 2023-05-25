@@ -1,114 +1,113 @@
 .section-logos {
-  max-width: 700px;
-  margin: 0 auto;
-  &__title {
-    margin-bottom: 82px;
-    @include d(1024) {
-      margin-bottom: 40px;
-    }
-  }
-  &__row {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    @include d(768) {
-      flex-wrap: wrap;
-    }
-  }
+	max-width: 700px;
+	margin: 0 auto;
+	&__title {
+		margin-bottom: 82px;
+		@include d(1024) {
+			margin-bottom: 40px;
+		}
+	}
+	&__row {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		@include d(768) {
+			flex-wrap: wrap;
+		}
+	}
 
-  &__col {
-    @include d(768) {
-      flex: 0 0 100%;
-    }
-  }
+	&__col {
+		@include d(768) {
+			flex: 0 0 100%;
+		}
+	}
 
-  &__content {
-    width: 164px;
-    margin-right: 160px;
-    @include d(768) {
-      margin-right: 0;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-  }
+	&__content {
+		width: 164px;
+		margin-right: 160px;
+		@include d(768) {
+			margin-right: 0;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+	}
 
-  &__box {
-    text-align: center;
-    @include d(768) {
-      padding: 0 15px;
-      flex: 0 0 33.333%;
-    }
-    &:not(:last-child) {
-      margin-bottom: 48px;
-    }
-    &:first-child {
-      text-align: left;
-      &>p {
-        font-size: 10px;
-        font-family: 'PoppinsRegular';
-        line-height: 1.4em;
-        color: $gray;
-      }
-    }
-    h6 {
-      text-transform: none;
-      color: $white;
-      margin-bottom: 8px;
-    }
-    &>p{
-      font-family: 'PoppinsBold';
-      margin-bottom: 8px;
-      font-size: 12px;
-    }
-
-  }
-  &__item {
-    border-radius: 10px;
-    width: 144px;
-    text-align: center;
-    margin: 0 auto;
-    padding: 14px 15px;
-    height: 64px;
-    font-size: 12px;
-    font-family: 'PoppinsSemiBold';
-    &.green {
-      background-color: rgba($green, 0.2);
-      color: $green;
-    }
-    &.blue {
-      background-color: rgba($blue, 0.2);
-      color: $blue;
-    }
-  }
-  &__images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-top: 27px;
-    position: relative;
-    @include d(768) {
-      justify-content: center;
-    }
-    &>img {
-      position: absolute;
-      top: 50%;
-      right: 100%;
-      transform: translate(0, -42%);
-      width: 160px;
-      @include d(768) {
-        display: none;
-      }
-     }
-  }
-  &__logo {
-    width: 110px;
-    height: 110px;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.16);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 15px;
-  }
+	&__box {
+		text-align: center;
+		@include d(768) {
+			padding: 0 15px;
+			flex: 0 0 33.333%;
+		}
+		&:not(:last-child) {
+			margin-bottom: 48px;
+		}
+		&:first-child {
+			text-align: left;
+			& > p {
+				font-size: 10px;
+				font-family: "PoppinsRegular";
+				line-height: 1.4em;
+				color: $gray;
+			}
+		}
+		h6 {
+			text-transform: none;
+			color: $white;
+			margin-bottom: 8px;
+		}
+		& > p {
+			font-family: "PoppinsBold";
+			margin-bottom: 8px;
+			font-size: 12px;
+		}
+	}
+	&__item {
+		border-radius: 10px;
+		width: 144px;
+		text-align: center;
+		margin: 0 auto;
+		padding: 14px 15px;
+		height: 64px;
+		font-size: 12px;
+		font-family: "PoppinsSemiBold";
+		&.green {
+			background-color: rgba($green, 0.2);
+			color: $green;
+		}
+		&.blue {
+			background-color: rgba($blue, 0.2);
+			color: $blue;
+		}
+	}
+	&__images {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px;
+		margin-top: 27px;
+		position: relative;
+		@include d(768) {
+			justify-content: center;
+		}
+		& > img {
+			position: absolute;
+			top: 50%;
+			right: 100%;
+			transform: translate(0, -42%);
+			width: 160px;
+			@include d(768) {
+				display: none;
+			}
+		}
+	}
+	&__logo {
+		width: 110px;
+		height: 110px;
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.16);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 15px;
+	}
 }

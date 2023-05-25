@@ -1,148 +1,160 @@
 // header
 .header {
-  padding: 40px 0 0 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
+	padding: 40px 0 0 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
 
-  &__row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 
-    @include d(768) {
-      flex-wrap: wrap;
-    }
-  }
+		@include d(768) {
+			flex-wrap: wrap;
+		}
+	}
 
-  &__logo {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+	&__logo {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
 
-    @include d(768) {
-      margin-bottom: 40px;
-    }
+		@include d(768) {
+			margin-bottom: 40px;
+		}
 
-    p {
-      position: relative;
-      margin-left: 24px;
-      padding-left: 24px;
-      font-size: 12px;
-      line-height: 16px;
-      color: $gray;
-      font-family: "PoppinsRegular", sans-serif;
+		p {
+			position: relative;
+			margin-left: 24px;
+			padding-left: 24px;
+			font-size: 12px;
+			line-height: 16px;
+			color: $gray;
+			font-family: "PoppinsRegular", sans-serif;
 
-      &::before {
-        content: "";
-        width: 1px;
-        height: 16px;
-        background-color: $white;
-        opacity: .16;
-        position: absolute;
-        left: 0;
-        top: 0;
-      }
-    }
-  }
+			&::before {
+				content: "";
+				width: 1px;
+				height: 16px;
+				background-color: $white;
+				opacity: 0.16;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+	}
 }
 
 .logo {
-  display: inline-block;
-  max-width: 100px;
-  flex: 0 0 100px;
+	display: inline-block;
+	max-width: 100px;
+	flex: 0 0 100px;
 }
 
-
 .pagination {
-  &__row {
-    position: relative;
+	&__row {
+		position: relative;
 
-    .swiper-pagination {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: static;
-      counter-reset: my-awesome-counter;
+		.swiper-pagination {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: static;
+			counter-reset: my-awesome-counter;
 
-      .swiper-pagination-bullet {
-        counter-increment: my-awesome-counter;
-        margin: 0;
-        width: 28px;
-        height: 22px;
-        border-radius: 8px;
-        position: relative;
-        border: 1px solid rgba(99, 184, 102, 0.2);
-        opacity: 1;
-        background-color: rgba(99, 184, 102, 0.2);
-        transition: $hover-duration $timing;
+			.swiper-pagination-bullet {
+				counter-increment: my-awesome-counter;
+				margin: 0;
+				width: 28px;
+				height: 22px;
+				border-radius: 8px;
+				position: relative;
+				border: 1px solid rgba(99, 184, 102, 0.2);
+				opacity: 1;
+				background-color: rgba(99, 184, 102, 0.2);
+				transition: $hover-duration $timing;
 
-        &::after {
-          background: linear-gradient(90deg, rgba(99, 184, 102, 0.2) 0%, rgba(0, 212, 255, 0) 100%);
-        }
+				&::after {
+					background: linear-gradient(
+						90deg,
+						rgba(99, 184, 102, 0.2) 0%,
+						rgba(0, 212, 255, 0) 100%
+					);
+				}
 
-        &:not(:last-child) {
-          margin-right: 30px;
+				&:not(:last-child) {
+					margin-right: 30px;
 
-          &::after {
-            content: "";
-            width: 30px;
-            height: 4px;
-            position: absolute;
-            top: 50%;
-            left: calc(100% + 1px);
-            transform: translate(0, -50%);
-            background: linear-gradient(90deg, rgba(99, 184, 102, 0.2) 0%, rgba(0, 212, 255, 0) 100%);
-          }
-        }
+					&::after {
+						content: "";
+						width: 30px;
+						height: 4px;
+						position: absolute;
+						top: 50%;
+						left: calc(100% + 1px);
+						transform: translate(0, -50%);
+						background: linear-gradient(
+							90deg,
+							rgba(99, 184, 102, 0.2) 0%,
+							rgba(0, 212, 255, 0) 100%
+						);
+					}
+				}
 
-        &::before {
-          content: "0"counter(my-awesome-counter);
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          color: $white;
-          text-align: center;
-          font-family: "PoppinsMedium", sans-serif;
-          font-size: 12px;
-        }
+				&::before {
+					content: "0" counter(my-awesome-counter);
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					color: $white;
+					text-align: center;
+					font-family: "PoppinsMedium", sans-serif;
+					font-size: 12px;
+				}
+			}
 
-      }
+			.swiper-pagination-bullet-active ~ .swiper-pagination-bullet {
+				background-color: rgba(255, 255, 255, 0.16);
+				border-color: rgba(255, 255, 255, 0.16);
 
+				&::after {
+					background: linear-gradient(
+						90deg,
+						rgba(255, 255, 255, 0.16) 0%,
+						rgba(0, 212, 255, 0) 100%
+					);
+				}
+			}
 
-      .swiper-pagination-bullet-active~.swiper-pagination-bullet {
-        background-color: rgba(255, 255, 255, 0.16);
-        border-color: rgba(255, 255, 255, 0.16);
+			.swiper-pagination-bullet.swiper-pagination-bullet-active {
+				background-color: rgba(237, 161, 61, 0.2);
+				border: 1px solid rgba(255, 255, 255, 0.07);
 
-        &::after {
-          background: linear-gradient(90deg, rgba(255, 255, 255, 0.16) 0%, rgba(0, 212, 255, 0) 100%);
-        }
-      }
+				&::after {
+					background: linear-gradient(
+						90deg,
+						rgba(89, 165, 254, 0.2) 0%,
+						rgba(0, 212, 255, 0) 100%
+					);
+				}
+			}
+		}
+	}
 
-      .swiper-pagination-bullet.swiper-pagination-bullet-active {
-        background-color: rgba(237, 161, 61, 0.2);
-        border: 1px solid rgba(255, 255, 255, 0.07);
+	.swiper-pagination-bullets.swiper-pagination-horizontal,
+	.swiper-pagination-custom,
+	.swiper-pagination-fraction {
+		bottom: auto;
+		top: 0;
+		text-align: right;
+	}
 
-        &::after {
-          background: linear-gradient(90deg, rgba(89, 165, 254, 0.2) 0%, rgba(0, 212, 255, 0) 100%);
-        }
-      }
-    }
-
-  }
-
-  .swiper-pagination-bullets.swiper-pagination-horizontal,
-  .swiper-pagination-custom,
-  .swiper-pagination-fraction {
-    bottom: auto;
-    top: 0;
-    text-align: right;
-  }
-
-  .swiper-pagination-bullet {
-    margin: 0;
-  }
+	.swiper-pagination-bullet {
+		margin: 0;
+	}
 }
