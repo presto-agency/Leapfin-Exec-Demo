@@ -127,11 +127,14 @@
 		&_scroll {
 			overflow-x: hidden;
 			overflow-y: auto;
-			height: 371px;
+			height: 485px;
 			border-radius: 24px;
 			padding: 0 16px 0 24px;
 			position: relative;
-
+			margin-bottom: -20px;
+			&_sm {
+				height: 100%;
+			}
 			&::-webkit-scrollbar {
 				width: 3px;
 				height: 3px;
@@ -167,6 +170,7 @@
 			border-collapse: collapse;
 			border-radius: 24px;
 			width: 100%;
+			margin-bottom: 20px;
 			span {
 				color: $green;
 			}

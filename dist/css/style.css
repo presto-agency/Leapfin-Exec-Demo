@@ -57,8 +57,8 @@ body {
   font-size: 14px;
   font-family: "PoppinsRegular", sans-serif;
   color: #ffffff;
-  background: -o-radial-gradient(135.77% 22.47%, 145.34% 279.06%, #63B866 2.53%, #2A326D 42.88%, #1B2345 90.1%), no-repeat;
-  background: radial-gradient(145.34% 279.06% at 135.77% 22.47%, #63B866 2.53%, #2A326D 42.88%, #1B2345 90.1%), no-repeat;
+  background: -o-radial-gradient(135.77% 22.47%, 145.34% 279.06%, #63b866 2.53%, #2a326d 42.88%, #1b2345 90.1%), no-repeat;
+  background: radial-gradient(145.34% 279.06% at 135.77% 22.47%, #63b866 2.53%, #2a326d 42.88%, #1b2345 90.1%), no-repeat;
   /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
   -webkit-font-smoothing: antialiased;
   -webkit-backface-visibility: hidden;
@@ -105,7 +105,7 @@ h1 span,
 .title-1 span,
 h2 span,
 .title-2 span {
-  color: #1ED760;
+  color: #1ed760;
 }
 
 h3,
@@ -129,7 +129,7 @@ h5,
 h6,
 .title-6 {
   font-size: 14px;
-  color: #A2CB94;
+  color: #a2cb94;
   line-height: 1em;
   text-transform: uppercase;
 }
@@ -410,45 +410,45 @@ input[type=number] {
 textarea::-webkit-input-placeholder,
 input::-webkit-input-placeholder {
   font-size: 16px;
-  color: #26201A;
+  color: #26201a;
 }
 
 textarea::-moz-placeholder,
 input::-moz-placeholder {
   font-size: 16px;
-  color: #26201A;
+  color: #26201a;
 }
 
 textarea:-ms-input-placeholder,
 input:-ms-input-placeholder {
   font-size: 16px;
-  color: #26201A;
+  color: #26201a;
 }
 
 textarea::-webkit-input-placeholder, input::-webkit-input-placeholder {
   font-size: 16px;
-  color: #26201A;
+  color: #26201a;
 }
 
 textarea::-moz-placeholder, input::-moz-placeholder {
   font-size: 16px;
-  color: #26201A;
+  color: #26201a;
 }
 
 textarea:-ms-input-placeholder, input:-ms-input-placeholder {
   font-size: 16px;
-  color: #26201A;
+  color: #26201a;
 }
 
 textarea::-ms-input-placeholder, input::-ms-input-placeholder {
   font-size: 16px;
-  color: #26201A;
+  color: #26201a;
 }
 
 textarea::placeholder,
 input::placeholder {
   font-size: 16px;
-  color: #26201A;
+  color: #26201a;
 }
 
 input {
@@ -516,7 +516,7 @@ main .container {
 }
 
 .section__title p {
-  color: #C0C0C7;
+  color: #c0c0c7;
 }
 
 .section__navigation {
@@ -750,7 +750,7 @@ main .container {
 }
 
 .section__table table tr:nth-child(2) td:first-child {
-  color: #63B866;
+  color: #63b866;
 }
 
 .section__table table tr:nth-child(5) td {
@@ -766,7 +766,7 @@ main .container {
 }
 
 .section__table table tr:nth-child(6) td:first-child {
-  color: #63B866;
+  color: #63b866;
 }
 
 .section__table table tr:nth-child(7) td,
@@ -777,7 +777,7 @@ main .container {
 
 .section__table table tr:nth-child(7) td:first-child,
 .section__table table tr:nth-child(10) td:first-child {
-  color: #63B866;
+  color: #63b866;
 }
 
 .section__table table tr:nth-child(9) td {
@@ -803,7 +803,7 @@ main .container {
 }
 
 .section__table table tr:nth-child(2) td:first-child {
-  color: #63B866;
+  color: #63b866;
 }
 
 .section__table table tr:nth-child(9) td:first-child,
@@ -816,7 +816,7 @@ main .container {
 }
 
 .btn {
-  background-color: #1ED760;
+  background-color: #1ed760;
   text-align: center;
   color: #ffffff;
   display: inline-block;
@@ -826,7 +826,7 @@ main .container {
   width: 192px;
   font-size: 16px;
   padding: 0;
-  border: 1px solid #1ED760;
+  border: 1px solid #1ed760;
   font-family: "PoppinsSemiBold", sans-serif;
   -webkit-transition: background-color 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05), color 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
   -o-transition: background-color 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05), color 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
@@ -835,31 +835,31 @@ main .container {
 
 .btn:hover {
   background-color: transparent;
-  color: #1ED760;
+  color: #1ed760;
 }
 
 .bg-blue::before {
-  background-color: #59A5FE;
+  background-color: #59a5fe;
 }
 
 .bg-green::before {
-  background-color: #63B866;
+  background-color: #63b866;
 }
 
 .bg-orange::before {
-  background-color: #EDA13D;
+  background-color: #eda13d;
 }
 
 .bg-violet::before {
-  background-color: #7963B8;
+  background-color: #7963b8;
 }
 
 .bg-yellow::before {
-  background-color: #EDD13D;
+  background-color: #edd13d;
 }
 
 .bg-red::before {
-  background-color: #B86363;
+  background-color: #b86363;
 }
 
 .swiper-fade .swiper-slide-active,
@@ -906,7 +906,7 @@ main .container {
   padding-left: 24px;
   font-size: 12px;
   line-height: 16px;
-  color: #C0C0C7;
+  color: #c0c0c7;
   font-family: "PoppinsRegular", sans-serif;
 }
 
@@ -1134,7 +1134,7 @@ main .container {
   font-size: 10px;
   font-family: "PoppinsRegular";
   line-height: 1.4em;
-  color: #C0C0C7;
+  color: #c0c0c7;
 }
 
 .section-logos__box h6,
@@ -1163,12 +1163,12 @@ main .container {
 
 .section-logos__item.green {
   background-color: rgba(99, 184, 102, 0.2);
-  color: #63B866;
+  color: #63b866;
 }
 
 .section-logos__item.blue {
   background-color: rgba(89, 165, 254, 0.2);
-  color: #59A5FE;
+  color: #59a5fe;
 }
 
 .section-logos__images {
@@ -1253,7 +1253,7 @@ main .container {
 
 .segmentation-tab__link.active {
   background-color: rgba(89, 165, 254, 0.32);
-  color: #59A5FE;
+  color: #59a5fe;
 }
 
 .segmentation-tab__link:not(:last-child) {
@@ -1346,13 +1346,18 @@ main .container {
 .segmentation-table_scroll {
   overflow-x: hidden;
   overflow-y: auto;
-  height: 371px;
+  height: 485px;
   border-radius: 24px;
   padding: 0 16px 0 24px;
   position: relative;
+  margin-bottom: -20px;
   /* Track */
   /* Handle */
   /* Handle on hover */
+}
+
+.segmentation-table_scroll_sm {
+  height: 100%;
 }
 
 .segmentation-table_scroll::-webkit-scrollbar {
@@ -1387,10 +1392,11 @@ main .container {
   border-collapse: collapse;
   border-radius: 24px;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .segmentation-table table span {
-  color: #63B866;
+  color: #63b866;
 }
 
 .segmentation-table table strong {
@@ -1406,7 +1412,7 @@ main .container {
   height: 31px;
   text-transform: uppercase;
   font-size: 10px;
-  color: #C0C0C7;
+  color: #c0c0c7;
   position: relative;
 }
 
@@ -1468,7 +1474,7 @@ main .container {
 }
 
 .segmentation-table_1 table tr:nth-child(2) td:first-child {
-  color: #63B866;
+  color: #63b866;
   font-family: "PoppinsBold", sans-serif;
 }
 
@@ -1484,7 +1490,7 @@ main .container {
 }
 
 .segmentation-table_1 table tr:nth-child(6) td:first-child {
-  color: #63B866;
+  color: #63b866;
   font-family: "PoppinsBold", sans-serif;
 }
 
@@ -1496,7 +1502,7 @@ main .container {
 
 .segmentation-table_1 table tr:nth-child(7) td:first-child,
 .segmentation-table_1 table tr:nth-child(10) td:first-child {
-  color: #63B866;
+  color: #63b866;
 }
 
 .segmentation-table_1 table tr:nth-child(9) td {
@@ -1529,7 +1535,7 @@ main .container {
 
 #periodBtn.active {
   background-color: rgba(30, 215, 96, 0.32);
-  color: #1ED760;
+  color: #1ed760;
 }
 
 table tr.bold-green {
@@ -1561,11 +1567,11 @@ table tr.bold-green td::before {
 }
 
 table tr.bold-green td:first-child {
-  color: #63B866;
+  color: #63b866;
 }
 
 table tr.green td:first-child {
-  color: #63B866;
+  color: #63b866;
 }
 
 .logic {
@@ -1595,7 +1601,7 @@ table tr.green td:first-child {
   border: none;
   outline: none;
   font-size: 14px;
-  color: #C0C0C7;
+  color: #c0c0c7;
   cursor: default;
   margin-bottom: 10px;
 }
@@ -1610,7 +1616,7 @@ table tr.green td:first-child {
 
 .logic-tab__link.blue {
   cursor: pointer;
-  background-color: #2B3D74;
+  background-color: #2b3d74;
   color: #ffffff;
   -webkit-transition: color 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05), background-color 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
   -o-transition: color 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05), background-color 0.5s cubic-bezier(0.17, 0.67, 0.55, 1.05);
@@ -1618,14 +1624,14 @@ table tr.green td:first-child {
 }
 
 .logic-tab__link.blue.active {
-  color: #59A5FE;
-  background-color: #38579A;
+  color: #59a5fe;
+  background-color: #38579a;
 }
 
 .logic-tab__link.green {
   cursor: pointer;
   background-color: rgba(30, 215, 96, 0.16);
-  color: #1ED760;
+  color: #1ed760;
 }
 
 .logic-tab__content {
@@ -1772,7 +1778,7 @@ table tr.green td:first-child {
   height: 31px;
   text-transform: uppercase;
   font-size: 10px;
-  color: #C0C0C7;
+  color: #c0c0c7;
   position: relative;
 }
 
@@ -1806,7 +1812,7 @@ table tr.green td:first-child {
 }
 
 .logic-table_1 table tr:nth-child(2) td:first-child {
-  color: #63B866;
+  color: #63b866;
   font-family: "PoppinsBold", sans-serif;
 }
 
@@ -1822,7 +1828,7 @@ table tr.green td:first-child {
 }
 
 .logic-table_1 table tr:nth-child(6) td:first-child {
-  color: #63B866;
+  color: #63b866;
   font-family: "PoppinsBold", sans-serif;
 }
 
@@ -1834,7 +1840,7 @@ table tr.green td:first-child {
 
 .logic-table_1 table tr:nth-child(7) td:first-child,
 .logic-table_1 table tr:nth-child(10) td:first-child {
-  color: #63B866;
+  color: #63b866;
 }
 
 .logic-table_1 table tr:nth-child(9) td {
@@ -2134,7 +2140,7 @@ table tr.green td:first-child {
 .tab__table table tr th {
   text-transform: uppercase;
   font-size: 10px;
-  color: #C0C0C7;
+  color: #c0c0c7;
   border: none;
   background: rgba(255, 255, 255, 0.08);
 }
